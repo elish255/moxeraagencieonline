@@ -26,3 +26,16 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+
+## Moxera registration & Mobilipa setup
+
+- Registration is now handled by the internal `/jisajili` page.
+- Registration details needed for payment are saved in browser `localStorage`.
+- The registration confirmation popup sends the user to `/malipo`.
+- Activation/payment amount is fixed at **TZS 16,000**.
+- `LIPA SASA` sends a Mobilipa USSD Push to the submitted phone number.
+- WhatsApp and SMS floating buttons have been removed.
+- Replace `public/uploads/registration-image.jpg` and `public/uploads/pesa-image.jpg` to change the website images.
+- Configure the server environment variable `MOBILIPA_API_KEY`; never put the secret key in frontend/public files.
+- Mobilipa API documentation: https://mobilipa.store/api-docs

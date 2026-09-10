@@ -175,3 +175,21 @@
   padding: 0.55rem 2.2rem 0.55rem 1rem;
   clip-path: polygon(0 0, calc(100% - 1.1rem) 0, 100% 100%, 0 100%);
 }
+
+
+@layer components {
+  .signup-input {
+    width: 100%;
+    border-radius: 1.15rem;
+    border: 1px solid transparent;
+    background: #fff0e3;
+    padding: 0.95rem 1.1rem;
+    color: #3b3844;
+    font-size: 1rem;
+    outline: none;
+  }
+  .signup-input:focus {
+    border-color: #ffb5a8;
+    box-shadow: 0 0 0 3px rgba(255, 73, 61, 0.08);
+  }
+}

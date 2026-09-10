@@ -1,11 +1,7 @@
-import logoBrown from "@/assets/moxera-logo-brown.jpg";
-import logoOrange from "@/assets/moxera-logo-orange.jpg";
-import pesa from "@/assets/pesa.jpg";
 import cheti from "@/assets/cheti.jpg";
-
-export const REGISTER_URL = "https://kozenasite.com/register?ref=JAMESS";
-export const WHATSAPP_URL = "https://wa.me/255700000000";
-export const SMS_URL = "sms:+255700000000";
+export const REGISTER_URL = "/jisajili";
+export const REGISTRATION_IMAGE_URL = "/uploads/registration-image.jpg";
+export const MONEY_IMAGE_URL = "/uploads/pesa-image.jpg";
 export const JOIN_FEE_TZS = 16000;
 
 export type Post = {
@@ -24,7 +20,7 @@ export const posts: Post[] = [
     title: "Moxera Agencies Ni Nini??Na Inafanyeje Kazi,Utanufaika Vipi Bonyeza Hapa",
     author: "MOXERA AGENCIES",
     date: "September 09, 2026",
-    image: logoBrown,
+    image: REGISTRATION_IMAGE_URL,
     excerpt:
       "BONYEZA HAPA KUJISAJILI MOXERA AGENCIES. SOMA SUMMARY HII HAPA CHINI ILI UWEZE KUJUA MOXERA AGENCIES NI NINI NA INAFANYEJE KAZI PIA ITAKUSAIDIA VIPI...",
     body: [
@@ -54,7 +50,7 @@ export const posts: Post[] = [
     title: "Tizama Tunavyotoa Pesa Hapa Moxera Agencies",
     author: "MOXERA AGENCIES",
     date: "September 09, 2026",
-    image: pesa,
+    image: MONEY_IMAGE_URL,
     excerpt:
       "BONYEZA HAPA KUJISAJILI MOXERA AGENCIES. Bonyeza hii Video uone Tunavyotoa Pesa Hapa Moxera Agencies ?...",
     body: [
