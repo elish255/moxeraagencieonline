@@ -91,10 +91,10 @@ function Malipo() {
 
   return (
     <div className="min-h-screen bg-muted">
-      <header className="bg-[oklch(0.28_0.07_160)] text-ink-foreground">
+      <header className="bg-[#ff3f34] text-white">
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-4 py-5">
           <h1 className="font-display text-xl font-extrabold tracking-tight">
-            MOXERA <span className="text-accent">MALIPO</span>
+            MOXERA <span className="text-white">MALIPO</span>
           </h1>
           <span className="rounded-full bg-ink-foreground/10 px-4 py-2 text-xs font-bold tracking-wide">
             MALIPO SALAMA
@@ -115,14 +115,14 @@ function Malipo() {
           </div>
         </div>
 
-        <span className="inline-flex items-center gap-2 rounded-full bg-[oklch(0.28_0.07_160)] px-5 py-3 text-sm font-semibold text-ink-foreground">
+        <span className="inline-flex items-center gap-2 rounded-full bg-[#ff3f34] px-5 py-3 text-sm font-semibold text-white">
           🇹🇿 Tanzania
         </span>
 
         <section className="rounded-2xl border border-border bg-card shadow-[var(--shadow-card)]">
           <div className="flex items-center gap-4 border-b border-border p-5">
-            <span className="flex size-12 items-center justify-center rounded-2xl bg-[oklch(0.95_0.05_150)]">
-              <Zap className="size-6 text-accent" />
+            <span className="flex size-12 items-center justify-center rounded-2xl bg-[#fff0e3]">
+              <Zap className="size-6 text-[#ff3f34]" />
             </span>
             <div>
               <h2 className="text-lg">Tanzania</h2>
@@ -131,9 +131,9 @@ function Malipo() {
           </div>
 
           <div className="space-y-4 p-5">
-            <div className="flex items-center justify-between rounded-xl bg-[oklch(0.96_0.03_150)] px-4 py-4">
+            <div className="flex items-center justify-between rounded-xl bg-[#fff0e3] px-4 py-4">
               <span className="text-sm text-muted-foreground">Kiasi cha kulipa</span>
-              <span className="font-display text-xl font-extrabold text-[oklch(0.35_0.1_160)]">
+              <span className="font-display text-xl font-extrabold text-[#ff3f34]">
                 {JOIN_FEE_TZS.toLocaleString("en-US")} TZS
               </span>
             </div>
@@ -163,14 +163,14 @@ function Malipo() {
               type="button"
               onClick={onPay}
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[oklch(0.32_0.09_160)] px-6 py-4 font-display text-base font-bold tracking-wide text-ink-foreground transition-transform hover:scale-[1.01] disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#ff3f34] px-6 py-4 font-display text-base font-bold tracking-wide text-ink-foreground transition-transform hover:scale-[1.01] disabled:opacity-60"
             >
               <Lock className="size-5" /> {loading ? "INATUMA..." : "LIPA SASA"}
             </button>
 
             {note && (
               <p
-                className={`text-sm ${note.kind === "ok" ? "text-[oklch(0.45_0.13_155)]" : "text-destructive"}`}
+                className={`text-sm ${note.kind === "ok" ? "text-[#ff3f34]" : "text-destructive"}`}
               >
                 {note.text}
               </p>

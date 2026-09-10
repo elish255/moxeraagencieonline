@@ -189,7 +189,7 @@ function Jisajili() {
               Ili uweze kukamilisha usajili na kuanza kufundisha wazungu lugha ya Kiswahili huku ukilipwa,
               unahitaji kuwa na mtaji wa kuanzia wa:
             </p>
-            <div className="mt-5 rounded-[28px] bg-gradient-to-r from-[#4ebc2c] to-[#2e9f43] px-5 py-5 shadow-lg">
+            <div className="mt-5 rounded-[28px] bg-[#ff3f34] px-5 py-5 shadow-lg">
               <p className="text-sm font-bold tracking-[0.18em]">MTAJI WA KUANZIA</p>
               <p className="mt-1 text-4xl font-extrabold">TSh {JOIN_FEE_TZS.toLocaleString("en-US")}</p>
             </div>
@@ -197,7 +197,7 @@ function Jisajili() {
               Tafadhali hakikisha una kiasi hiki tayari ili uweze kuendelea na hatua zinazofuata za usajili bila usumbufu.
             </p>
             <div className="mt-5 border-t border-white/15 pt-5">
-              <button type="button" onClick={() => navigate({ to: "/malipo" })} className="w-full rounded-full bg-gradient-to-r from-[#80c52b] to-[#2ca344] px-6 py-4 font-display text-base font-bold tracking-[0.16em] text-white shadow-lg hover:brightness-105">
+              <button type="button" onClick={() => navigate({ to: "/malipo" })} className="w-full rounded-full bg-[#ff3f34] px-6 py-4 font-display text-base font-bold tracking-[0.16em] text-white shadow-lg hover:brightness-105">
                 <LogIn className="mr-2 inline size-5" /> JISAJILI SASA
               </button>
               <button type="button" onClick={() => setShowPopup(false)} className="mt-4 text-xs font-bold tracking-[0.2em] text-white/65">
