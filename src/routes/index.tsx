@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const featured = posts[0];
+  const featured = posts[0]!;
 
   return (
     <div className="min-h-screen bg-background">
