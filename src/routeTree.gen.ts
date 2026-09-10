@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as JisajiliRouteImport } from './routes/jisajili'
+import { Route as MalipoRouteImport } from './routes/malipo'
 import { Route as PostsSlugRouteImport } from './routes/posts.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -29,6 +31,16 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JisajiliRoute = JisajiliRouteImport.update({
+  id: '/jisajili',
+  path: '/jisajili',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MalipoRoute = MalipoRouteImport.update({
+  id: '/malipo',
+  path: '/malipo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PostsSlugRoute = PostsSlugRouteImport.update({
   id: '/posts/$slug',
   path: '/posts/$slug',
@@ -39,12 +51,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/jisajili': typeof JisajiliRoute
+  '/malipo': typeof MalipoRoute
   '/posts/$slug': typeof PostsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/jisajili': typeof JisajiliRoute
+  '/malipo': typeof MalipoRoute
   '/posts/$slug': typeof PostsSlugRoute
 }
 export interface FileRoutesById {
@@ -52,20 +68,32 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/jisajili': typeof JisajiliRoute
+  '/malipo': typeof MalipoRoute
   '/posts/$slug': typeof PostsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/posts/$slug'
+  fullPaths:
+    '/' | '/about' | '/contact' | '/jisajili' | '/malipo' | '/posts/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/posts/$slug'
-  id: '__root__' | '/' | '/about' | '/contact' | '/posts/$slug'
+  to: '/' | '/about' | '/contact' | '/jisajili' | '/malipo' | '/posts/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/jisajili'
+    | '/malipo'
+    | '/posts/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  JisajiliRoute: typeof JisajiliRoute
+  MalipoRoute: typeof MalipoRoute
   PostsSlugRoute: typeof PostsSlugRoute
 }
 
@@ -92,6 +120,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jisajili': {
+      id: '/jisajili'
+      path: '/jisajili'
+      fullPath: '/jisajili'
+      preLoaderRoute: typeof JisajiliRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/malipo': {
+      id: '/malipo'
+      path: '/malipo'
+      fullPath: '/malipo'
+      preLoaderRoute: typeof MalipoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/posts/$slug': {
       id: '/posts/$slug'
       path: '/posts/$slug'
@@ -106,6 +148,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  JisajiliRoute: JisajiliRoute,
+  MalipoRoute: MalipoRoute,
   PostsSlugRoute: PostsSlugRoute,
 }
 export const routeTree = rootRouteImport
