@@ -6,6 +6,7 @@ import cheti from "@/assets/cheti.jpg";
 export const REGISTER_URL = "https://kozenasite.com/register?ref=JAMESS";
 export const WHATSAPP_URL = "https://wa.me/255700000000";
 export const SMS_URL = "sms:+255700000000";
+export const JOIN_FEE_TZS = 16000;
 
 export type Post = {
   slug: string;
