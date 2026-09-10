@@ -38,7 +38,7 @@ function Malipo() {
   const orderId = useRef<string | null>(null);
 
   useEffect(() => {
-    const raw = sessionStorage.getItem("moxera_signup");
+    const raw = localStorage.getItem("moxera_signup");
     if (!raw) return;
     try {
       const s = JSON.parse(raw) as { fullName?: string; phone?: string };
@@ -50,17 +50,18 @@ function Malipo() {
   }, []);
 
   useEffect(() => {
-    if (!orderId.current || status === "COMPLETED" || status === "FAILED") return;
+    if (!orderId.current || ["COMPLETED", "SUCCESS", "FAILED", "CANCELLED", "REJECTED"].includes(String(status).toUpperCase())) return;
     const id = orderId.current;
     let tries = 0;
     const timer = setInterval(async () => {
       tries += 1;
       const res = await checkStatus({ data: { orderId: id } });
-      setStatus(res.status);
-      if (["COMPLETED", "SUCCESS", "FAILED", "CANCELLED", "REJECTED"].includes(res.status)) {
+      const normalizedStatus = String(res.status).toUpperCase();
+      setStatus(normalizedStatus);
+      if (["COMPLETED", "SUCCESS", "FAILED", "CANCELLED", "REJECTED"].includes(normalizedStatus)) {
         clearInterval(timer);
         setNote(
-          res.status === "COMPLETED" || res.status === "SUCCESS"
+          normalizedStatus === "COMPLETED" || normalizedStatus === "SUCCESS"
             ? { kind: "ok", text: "Malipo yamekamilika! Karibu Moxera Agencies." }
             : { kind: "err", text: "Malipo hayakukamilika. Tafadhali jaribu tena." },
         );
