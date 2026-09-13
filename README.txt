@@ -1,6 +1,13 @@
-MOXERA AGENCIES BLOG
+MOXERA BLOG - VERCEL FIXED
 
-This folder is a static blog version based on the uploaded www.moxera.org snapshot.
-The previous chat system is not included. Registration links point to:
+IMPORTANT:
+This is a static HTML blog. It does NOT use Vite, React, Bun, or the old chat system.
+
+The registration link used by the site is:
 https://moxeraagencies.com/register?ref=Mtukazi
-Only WhatsApp and SMS contact buttons are provided.
+
+WhatsApp and SMS buttons are retained.
+
+VERCEL:
+Replace the old repository contents with ALL files in this folder (delete old src/, vite.config.*, bun.lock, package-lock.json, etc.).
+Then deploy. The build command is a harmless no-op and the HTML files are served directly.
