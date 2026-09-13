@@ -1,5 +1,5 @@
-import cheti from "@/assets/cheti.jpg";
-export const REGISTER_URL = "/jisajili";
+export const REGISTER_URL = "https://moxeraagencies.com/register?ref=Mtukazi";
+export const SITE_LOGO_URL = "/uploads/logo.jpg";
 export const REGISTRATION_IMAGE_URL = "/uploads/registration-image.jpg";
 export const MONEY_IMAGE_URL = "/uploads/pesa-image.jpg";
 export const JOIN_FEE_TZS = 16000;
@@ -35,7 +35,7 @@ export const posts: Post[] = [
     title: "Usajili Wa Moxera Agencies Platform Ni Salama Na Uhakika.",
     author: "MOXERA AGENCIES",
     date: "September 09, 2026",
-    image: cheti,
+    image: REGISTRATION_IMAGE_URL,
     excerpt:
       "Bonyeza Hapa Kujisajili Na Moxera Agencies. Platform ya Moxera Agencies imesajiliwa na Ni sehemu salama ya kujiingizia Kipato kwa Mtaji kidogo,U...",
     body: [
