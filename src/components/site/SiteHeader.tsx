@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Twitter, Instagram, Home, Play, UserPlus } from "lucide-react";
-import { SITE_LOGO_URL, REGISTER_URL } from "@/data/posts";
+import { REGISTRATION_IMAGE_URL, REGISTER_URL } from "@/data/posts";
 
 const socials = [
   { Icon: Facebook, label: "Facebook", cls: "bg-[oklch(0.5_0.2_260)]" },
@@ -54,7 +54,7 @@ export function SiteHeader() {
             >
               <div className="flex items-center gap-4">
                 <img
-                  src={SITE_LOGO_URL}
+                  src={REGISTRATION_IMAGE_URL}
                   alt="Nembo ya Moxera Agencies"
                   width={1088}
                   height={608}
