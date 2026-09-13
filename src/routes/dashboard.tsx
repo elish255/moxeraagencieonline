@@ -5,10 +5,9 @@ import {
   Menu, Copy, MessageCircle, Megaphone, PieChart, Languages, PenLine, Rocket, LogOut,
 } from "lucide-react";
 import { toast } from "sonner";
+const logo = "/uploads/logo.jpg";
 import { Button } from "@/components/ui/button";
 import { clearUser, loadUser, pickForeigners, type Foreigner, type MoxeraUser } from "@/lib/moxera";
-
-const logo = "/uploads/logo.jpg";
 
 export const Route = createFileRoute("/dashboard")({
   head: () => ({

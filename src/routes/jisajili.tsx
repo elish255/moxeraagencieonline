@@ -5,12 +5,15 @@ const REGISTER_URL = "https://moxeraagencies.com/register?ref=Mtukazi";
 
 export const Route = createFileRoute("/jisajili")({
   head: () => ({
-    meta: [{ title: "Jisajili | Moxera Agencies" }],
+    meta: [
+      { title: "Jisajili | Moxera Agencies" },
+      { name: "description", content: "Jisajili kwenye Moxera Agencies." },
+    ],
   }),
-  component: JisajiliRedirect,
+  component: RegisterRedirect,
 });
 
-function JisajiliRedirect() {
+function RegisterRedirect() {
   useEffect(() => {
     window.location.replace(REGISTER_URL);
   }, []);
@@ -18,8 +21,8 @@ function JisajiliRedirect() {
   return (
     <main className="flex min-h-screen items-center justify-center px-6 text-center">
       <div>
-        <p className="text-lg font-bold">Inaelekeza kwenye usajili…</p>
-        <a href={REGISTER_URL} className="mt-3 inline-block font-bold text-primary underline">
+        <p className="text-lg font-bold">Inaelekeza kwenye ukurasa wa usajili…</p>
+        <a href={REGISTER_URL} className="mt-3 inline-block font-bold underline">
           Bonyeza hapa kama haijaelekea
         </a>
       </div>

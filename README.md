@@ -30,7 +30,7 @@ npm run dev
 
 ## Moxera registration & Mobilipa setup
 
-- Registration is now handled by the internal `/jisajili` page.
+- Registration buttons and links now open https://moxeraagencies.com/register?ref=Mtukazi. The `/jisajili` route redirects there as well.
 - Registration details needed for payment are saved in browser `localStorage`.
 - The registration confirmation popup sends the user to `/malipo`.
 - Activation/payment amount is fixed at **TZS 16,000**.

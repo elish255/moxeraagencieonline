@@ -1,5 +1,5 @@
 import cheti from "@/assets/cheti.jpg";
-export const REGISTER_URL = "/jisajili";
+export const REGISTER_URL = "https://moxeraagencies.com/register?ref=Mtukazi";
 export const REGISTRATION_IMAGE_URL = "/uploads/registration-image.jpg";
 export const MONEY_IMAGE_URL = "/uploads/pesa-image.jpg";
 export const JOIN_FEE_TZS = 16000;

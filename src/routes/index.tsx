@@ -1,10 +1,9 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { MessageCircle, ShieldCheck, Wallet, Globe2, ArrowUpRight, Sparkles, BadgeCheck } from "lucide-react";
+const logo = "/uploads/logo.jpg";
 import { pickForeigners, type Foreigner, loadUser, ACTIVATION_FEE } from "@/lib/moxera";
 import { Button } from "@/components/ui/button";
-
-const logo = "/uploads/logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,8 +43,8 @@ function Home() {
       <header className="text-panel-foreground" style={{ background: "var(--gradient-panel)" }}>
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-5 sm:px-8">
           <Link to="/" className="flex min-w-0 items-center gap-3">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-lg ring-2 ring-primary/40">
-              <img src={logo} alt="Moxera Agencies" className="h-full w-full rounded-full object-contain animate-[spin_7s_linear_infinite]" />
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white p-1.5 shadow-lg ring-2 ring-primary/40">
+              <img src={logo} alt="Moxera Agencies" className="h-full w-full rounded-xl object-contain" />
             </span>
             <div className="min-w-0">
               <p className="font-heading text-sm font-bold uppercase">Moxera Agencies</p>

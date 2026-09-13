@@ -1,15 +1,17 @@
+export const ACTIVATION_FEE = 16000;
+
 export type MoxeraUser = {
-  fullName: string;
   username: string;
-  phone: string;
-  country: string;
+  fullName?: string;
+  phone?: string;
+  country?: string;
 };
 
 export type Foreigner = {
   id: string;
   name: string;
-  age: number;
   country: string;
+  age: number;
   flag: string;
   platform: string;
   online: boolean;
@@ -20,140 +22,43 @@ export type Foreigner = {
   replies: string[];
 };
 
-export const ACTIVATION_FEE = 16_000;
-
-const FOREIGNERS: Foreigner[] = [
-  {
-    id: "emma-uk",
-    name: "Emma",
-    age: 27,
-    country: "United Kingdom",
-    flag: "🇬🇧",
-    platform: "Chat",
-    online: true,
-    rate: 2500,
-    avatar: "https://i.pravatar.cc/512?img=47",
-    bio: "Ninajifunza Kiswahili na napenda mazungumzo ya kawaida.",
-    opener: ["Naitwa Emma, nifundishe Kiswahili 😊"],
-    replies: ["Asante! Nimejifunza neno jipya leo 😊", "Hilo neno linatumikaje kwenye sentensi?"],
-  },
-  {
-    id: "oliver-canada",
-    name: "Oliver",
-    age: 31,
-    country: "Canada",
-    flag: "🇨🇦",
-    platform: "Chat",
-    online: true,
-    rate: 3000,
-    avatar: "https://i.pravatar.cc/512?img=12",
-    bio: "Nataka kujua zaidi kuhusu Tanzania na Kiswahili.",
-    opener: ["Habari! Mimi ni Oliver kutoka Canada. Unaweza kunifundisha Kiswahili?"],
-    replies: ["Hiyo ni nzuri sana. Naweza kujaribu kusema hivyo?", "Asante kwa kunisaidia, rafiki!"],
-  },
-  {
-    id: "sophie-france",
-    name: "Sophie",
-    age: 25,
-    country: "France",
-    flag: "🇫🇷",
-    platform: "Chat",
-    online: true,
-    rate: 2800,
-    avatar: "https://i.pravatar.cc/512?img=32",
-    bio: "Ninapenda lugha, safari na kujifunza maneno mapya.",
-    opener: ["Mambo! Nataka kujifunza Kiswahili cha mazungumzo ya kila siku."],
-    replies: ["Nimeipenda hiyo! Unasemaje 'good morning' kwa Kiswahili?", "Pole kama nimekosea, naendelea kujifunza 😊"],
-  },
-  {
-    id: "liam-australia",
-    name: "Liam",
-    age: 29,
-    country: "Australia",
-    flag: "🇦🇺",
-    platform: "Chat",
-    online: false,
-    rate: 3200,
-    avatar: "https://i.pravatar.cc/512?img=11",
-    bio: "Ninajifunza Kiswahili kwa ajili ya safari yangu ya Afrika.",
-    opener: ["Habari! Nitasafiri Afrika Mashariki. Nisaidie na Kiswahili kidogo?"],
-    replies: ["Asante sana! Hilo litakuwa muhimu kwenye safari yangu.", "Sawa, nitalikariri hilo neno 😊"],
-  },
-  {
-    id: "mia-usa",
-    name: "Mia",
-    age: 24,
-    country: "United States",
-    flag: "🇺🇸",
-    platform: "Chat",
-    online: true,
-    rate: 2700,
-    avatar: "https://i.pravatar.cc/512?img=44",
-    bio: "Ninapenda kujifunza lugha na kuzungumza na watu wa tamaduni tofauti.",
-    opener: ["Hi! Nataka kujifunza misemo rahisi ya Kiswahili 😊"],
-    replies: ["Wow, hiyo ni rahisi kukumbuka!", "Asante kwa kunifundisha, nimefurahi sana."],
-  },
-  {
-    id: "noah-germany",
-    name: "Noah",
-    age: 30,
-    country: "Germany",
-    flag: "🇩🇪",
-    platform: "Chat",
-    online: true,
-    rate: 2900,
-    avatar: "https://i.pravatar.cc/512?img=13",
-    bio: "Nataka kuzoea Kiswahili kabla ya kutembelea Afrika Mashariki.",
-    opener: ["Habari! Ni salamu gani maarufu zaidi Tanzania?"],
-    replies: ["Aah, nimeelewa sasa. Asante!", "Nitaitumia mara nitakapofika Tanzania."],
-  },
+const foreigners: Foreigner[] = [
+  { id: "emma", name: "Emma", country: "United Kingdom", age: 26, flag: "🇬🇧", platform: "Language", online: true, rate: 5000, avatar: "https://i.pravatar.cc/512?img=47", bio: "Nataka kujifunza Kiswahili kupitia mazungumzo ya kawaida.", opener: ["Hi! Naitwa Emma, nifundishe Kiswahili 😊"], replies: ["Asante! Nimejifunza kitu kipya leo 😊", "Hilo neno la Kiswahili ni zuri sana!"] },
+  { id: "oliver", name: "Oliver", country: "Australia", age: 29, flag: "🇦🇺", platform: "Language", online: true, rate: 6000, avatar: "https://i.pravatar.cc/512?img=12", bio: "Ninapenda Tanzania na nataka kuzoea Kiswahili cha kila siku.", opener: ["Hello! Naomba unifundishe salamu za Kiswahili."], replies: ["Aah, nimeelewa. Asante!", "Nitajaribu kulitumia leo."] },
+  { id: "sophia", name: "Sophia", country: "Canada", age: 24, flag: "🇨🇦", platform: "Language", online: true, rate: 4500, avatar: "https://i.pravatar.cc/512?img=32", bio: "Ninajifunza Kiswahili kabla ya safari yangu ya Afrika Mashariki.", opener: ["Habari! Niko Canada, unaweza kunifundisha Kiswahili?"], replies: ["Perfect, asante kwa kunisaidia!", "Sasa naweza kusema hilo vizuri 😊"] },
+  { id: "lucas", name: "Lucas", country: "Germany", age: 31, flag: "🇩🇪", platform: "Language", online: false, rate: 5500, avatar: "https://i.pravatar.cc/512?img=11", bio: "Ninapenda lugha na nataka kujifunza maneno ya Kiswahili kwa mazoezi.", opener: ["Jambo! Nisaidie kujifunza Kiswahili kidogo."], replies: ["Hiyo ni rahisi kukumbuka, asante!", "Tutazungumza tena hivi karibuni."] },
+  { id: "mia", name: "Mia", country: "United States", age: 27, flag: "🇺🇸", platform: "Language", online: true, rate: 7000, avatar: "https://i.pravatar.cc/512?img=44", bio: "Ninajiandaa kutembelea Zanzibar na nataka kujua Kiswahili cha msingi.", opener: ["Hey! Nifundishe sentensi moja ya Kiswahili 😊"], replies: ["Wow, hilo ni zuri!", "Asante sana kwa somo hilo."] },
+  { id: "daniel", name: "Daniel", country: "Netherlands", age: 30, flag: "🇳🇱", platform: "Language", online: true, rate: 5000, avatar: "https://i.pravatar.cc/512?img=13", bio: "Nataka kufanya mazoezi ya Kiswahili kabla ya kuja Afrika.", opener: ["Habari rafiki! Unaweza kunifundisha neno jipya?"], replies: ["Nimeandika hilo ili nisahau. Asante!", "Kiswahili kinafurahisha kujifunza."] },
 ];
 
-function shuffle<T>(items: T[]): T[] {
-  const copy = [...items];
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j]!, copy[i]!];
-  }
-  return copy;
-}
-
 export function pickForeigners(count = 4): Foreigner[] {
-  return shuffle(FOREIGNERS).slice(0, Math.max(0, count));
+  const pool = [...foreigners];
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, Math.min(count, pool.length));
 }
 
-export function getForeigner(id: string): Foreigner | null {
-  return FOREIGNERS.find((foreigner) => foreigner.id === id) ?? null;
+export function getForeigner(id: string) {
+  return foreigners.find((f) => f.id === id);
 }
 
 export function loadUser(): MoxeraUser | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = window.localStorage.getItem("moxera_signup");
+    const raw = localStorage.getItem("moxera_user") ?? localStorage.getItem("moxera_signup");
     if (!raw) return null;
-    const parsed: unknown = JSON.parse(raw);
-    if (!parsed || typeof parsed !== "object") return null;
-    const value = parsed as Partial<MoxeraUser>;
-    if (
-      typeof value.fullName !== "string" ||
-      typeof value.username !== "string" ||
-      typeof value.phone !== "string" ||
-      typeof value.country !== "string"
-    ) {
-      return null;
-    }
-    return {
-      fullName: value.fullName,
-      username: value.username,
-      phone: value.phone,
-      country: value.country,
-    };
+    const parsed = JSON.parse(raw) as Partial<MoxeraUser>;
+    if (!parsed.username) return null;
+    return { username: parsed.username, fullName: parsed.fullName, phone: parsed.phone, country: parsed.country };
   } catch {
     return null;
   }
 }
 
-export function clearUser(): void {
+export function clearUser() {
   if (typeof window === "undefined") return;
-  window.localStorage.removeItem("moxera_signup");
+  localStorage.removeItem("moxera_user");
+  localStorage.removeItem("moxera_signup");
 }
